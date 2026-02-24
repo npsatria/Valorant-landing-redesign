@@ -885,3 +885,469 @@ ul {
         gap: 40px;
     }
 }
+
+/* ========================================================= */
+/* DRIBBBLE INSPIRATION HOMEPAGE STYLES */
+/* ========================================================= */
+
+.d-hero {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    background-color: var(--clr-valorant-red);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.d-hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
+
+.d-hero-watermark {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: 15rem;
+    line-height: 0.8;
+    color: rgba(0,0,0,0.05); /* very faint */
+    text-align: center;
+    white-space: nowrap;
+    z-index: 2;
+    pointer-events: none;
+    font-weight: 700;
+}
+
+.d-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.d-hero-title {
+    font-size: 10rem;
+    color: var(--clr-light);
+    letter-spacing: 15px;
+    margin-bottom: -150px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 4;
+}
+
+.d-hero-agent {
+    height: 80vh;
+    max-height: 800px;
+    object-fit: contain;
+    z-index: 5;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.d-hero-btn {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    font-size: 1.5rem;
+    padding: 15px 50px;
+    margin-top: -50px;
+    z-index: 6;
+}
+
+.d-hero-btn:hover {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    box-shadow: inset 0 0 0 2px var(--clr-light);
+}
+
+.d-brands-banner {
+    background-color: var(--clr-light);
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative;
+    z-index: 3;
+}
+
+.d-brands-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--clr-dark);
+    opacity: 0.7;
+    flex-wrap: wrap;
+    gap: 30px;
+    letter-spacing: 2px;
+}
+
+/* Precision Section */
+.d-precision {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+}
+
+.dark-text {
+    color: var(--clr-dark);
+}
+
+.white-text {
+    color: var(--clr-light);
+}
+
+.d-section-title {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.d-section-title.center {
+    text-align: center;
+}
+
+.d-section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: var(--clr-gray);
+}
+
+.d-precision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.d-precision-main {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 4px solid var(--clr-valorant-red);
+}
+
+.d-precision-collage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.d-precision-collage img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid var(--clr-dark);
+    transition: var(--transition-medium);
+}
+
+.d-precision-collage img:hover {
+    transform: scale(1.05);
+}
+
+/* Base Utility Backgrounds */
+.dark-bg { background-color: var(--clr-dark); }
+.light-bg { background-color: var(--clr-light); }
+.red-bg { background-color: var(--clr-valorant-red); }
+
+/* Agents Slanted Cards */
+.d-agents-cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 500px;
+    margin-top: 50px;
+}
+
+.d-agent-card {
+    flex: 1;
+    height: 100%;
+    transform: skewX(-10deg);
+    overflow: hidden;
+    transition: var(--transition-medium);
+    border-left: 2px solid rgba(255,255,255,0.1);
+    border-right: 2px solid rgba(255,255,255,0.1);
+    background-color: rgba(25, 35, 45, 0.5);
+    position: relative;
+}
+
+.d-agent-card:hover {
+    flex: 2;
+    background-color: var(--clr-valorant-red);
+}
+
+.d-agent-card-inner {
+    transform: skewX(10deg);
+    width: 150%;
+    margin-left: -25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.d-agent-card-inner img {
+    height: 90%;
+    object-fit: contain;
+    transition: var(--transition-medium);
+}
+
+.d-agent-card:hover .d-agent-card-inner img {
+    height: 105%;
+}
+
+.d-agent-name {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    opacity: 0.5;
+    transition: var(--transition-medium);
+}
+
+.d-agent-card:hover .d-agent-name {
+    opacity: 1;
+    bottom: 40px;
+}
+
+.d-agent-card-inner.red-bg {
+    background-color: var(--clr-valorant-red);
+}
+.d-agent-card:hover .d-agent-card-inner.red-bg {
+    background-color: var(--clr-light);
+}
+
+/* Skins Grid */
+.d-skins {
+    background-image: radial-gradient(#d3cfc7 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.d-skins-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 50px 0;
+}
+
+.d-skins-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.2));
+    transition: var(--transition-medium);
+}
+
+.d-skins-grid img:hover {
+    transform: translateY(-10px) rotate(-5deg);
+    filter: drop-shadow(15px 15px 20px rgba(255,70,85,0.4));
+}
+
+/* Center Buttons */
+.center-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.d-btn-outline {
+    background: transparent;
+    color: var(--clr-valorant-red);
+    box-shadow: inset 0 0 0 2px var(--clr-valorant-red);
+}
+
+.d-btn-outline:hover {
+    background: var(--clr-valorant-red);
+    color: var(--clr-light);
+}
+
+.d-btn-outline-white {
+    background: transparent;
+    color: var(--clr-light);
+    box-shadow: inset 0 0 0 2px var(--clr-light);
+}
+
+.d-btn-outline-white:hover {
+    background: var(--clr-light);
+    color: var(--clr-valorant-red);
+}
+
+/* Maps Section (Slanted) */
+.d-maps-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.d-map-card {
+    flex: 1;
+    transform: skewX(-15deg);
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--clr-gray);
+    transition: var(--transition-medium);
+}
+
+.d-map-card:hover {
+    border-color: var(--clr-valorant-red);
+}
+
+.d-map-card img {
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+    transform: skewX(15deg);
+    margin-left: -25%;
+    transition: var(--transition-medium);
+}
+
+.d-map-card:hover img {
+    transform: skewX(15deg) scale(1.1);
+}
+
+.d-map-info {
+    flex: 2;
+    padding: 40px;
+    background: var(--clr-valorant-red);
+    transform: skewX(-15deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.d-map-info h3 {
+    transform: skewX(15deg);
+    font-size: 2.5rem;
+    color: var(--clr-light);
+    margin-bottom: 20px;
+}
+
+.d-map-info p {
+    transform: skewX(15deg);
+    color: var(--clr-light);
+    margin-bottom: 30px;
+}
+
+.d-map-info .btn-primary {
+    transform: skewX(15deg);
+    align-self: flex-start;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    box-shadow: none;
+}
+
+/* News Section */
+.d-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.d-news-card {
+    background: var(--clr-dark);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--clr-darker);
+    transition: var(--transition-medium);
+}
+
+.d-news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.d-news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.d-news-content {
+    padding: 20px;
+}
+
+.d-news-content h3 {
+    color: var(--clr-light);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.d-news-content p {
+    color: var(--clr-gray);
+    font-size: 0.9rem;
+}
+
+/* Signup Footer */
+.d-signup {
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-glass-border);
+}
+
+.d-signup-content h2 {
+    font-size: 3rem;
+    color: var(--clr-light);
+    margin-bottom: 15px;
+}
+
+.d-signup-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-signup-form input {
+    flex: 1;
+    padding: 15px 20px;
+    background: transparent;
+    border: 2px solid var(--clr-gray);
+    color: var(--clr-light);
+    font-family: var(--font-body);
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.d-signup-form input:focus {
+    border-color: var(--clr-valorant-red);
+}
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+    .d-hero-title { font-size: 5rem; letter-spacing: 5px; margin-bottom: -80px; }
+    .d-hero-watermark { font-size: 8rem; }
+    .d-agents-cards { flex-direction: column; height: auto; gap: 20px; }
+    .d-agent-card, .d-agent-card-inner, .d-map-card, .d-map-info, .d-map-info h3, .d-map-info p, .d-map-info .btn-primary { 
+        transform: skewX(0); 
+    }
+    .d-agent-card { height: 300px; border: none; }
+    .d-agent-card-inner { width: 100%; margin: 0; }
+    .d-agent-card-inner img { height: 100%; }
+    .d-skins-grid { grid-template-columns: 1fr 1fr; }
+    .d-maps-cards { flex-direction: column; height: auto; }
+    .d-map-card img { width: 100%; margin: 0; }
+    .d-news-grid { grid-template-columns: 1fr; }
+    .d-precision-collage { grid-template-columns: 1fr 1fr; }
+}
