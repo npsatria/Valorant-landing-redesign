@@ -1,31 +1,32 @@
 /* components.css - Reusable UI elements: Navbar, Buttons, Cards, Forms */
 
-/* --- Navbar (Glassmorphic Pill Design) --- */
+/* --- Navbar (Sleek Edge-to-Edge Design) --- */
 .nav {
     position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: var(--max-width);
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    padding: 15px 30px;
-    background-color: var(--clr-glass);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--clr-glass-border);
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 25px 0;
+    background-color: transparent;
     transition: var(--transition-medium);
+    border-bottom: 1px solid transparent;
 }
 
 .nav.scrolled {
-    top: 10px;
-    width: 95%;
-    background-color: rgba(15, 25, 35, 0.9);
+    padding: 15px 0;
+    background-color: rgba(15, 25, 35, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .nav-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
