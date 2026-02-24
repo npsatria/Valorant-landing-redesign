@@ -1339,8 +1339,8 @@ ul {
     .d-hero-title { font-size: 5rem; letter-spacing: 5px; margin-bottom: -80px; }
     .d-hero-watermark { font-size: 8rem; }
     .d-agents-cards { flex-direction: column; height: auto; gap: 20px; }
-    .d-agent-card, .d-agent-card-inner, .d-map-card, .d-map-info, .d-map-info h3, .d-map-info p, .d-map-info .btn-primary { 
-        transform: skewX(0); 
+    .d-agent-card, .d-agent-card-inner, .d-map-card, .d-map-info, .d-map-info h3, .d-map-info p, .d-map-info .btn-primary {
+        transform: skewX(0);
     }
     .d-agent-card { height: 300px; border: none; }
     .d-agent-card-inner { width: 100%; margin: 0; }
@@ -1350,4 +1350,386 @@ ul {
     .d-map-card img { width: 100%; margin: 0; }
     .d-news-grid { grid-template-columns: 1fr; }
     .d-precision-collage { grid-template-columns: 1fr 1fr; }
+}
+
+/* --- INTERNAL PAGES REDESIGN (DRIBBBLE STYLE) --- */
+
+.d-header {
+    background-color: var(--clr-valorant-red);
+    padding: 180px 0 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.d-header::before {
+    content: 'VALORANT';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: 20rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.d-header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 6rem;
+    color: var(--clr-light);
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+.d-header p {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+/* Slanted Agent Sections */
+.d-agent-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    background-color: var(--clr-dark);
+}
+
+.d-agent-section.slanted-top {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -50px;
+}
+
+.d-agent-section.slanted-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    margin-bottom: -50px;
+}
+
+.d-skill-panel {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    transition: var(--transition-medium);
+    position: relative;
+    z-index: 2;
+}
+
+.d-skill-panel:hover {
+    background: rgba(255, 70, 85, 0.1);
+    border-color: var(--clr-valorant-red);
+    transform: translateY(-5px);
+}
+
+.d-skill-info h3 {
+    font-family: var(--font-heading);
+    color: var(--clr-valorant-red);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.d-agent-name-huge {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: var(--font-heading);
+    font-size: 12rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Slanted Map Panels (Internal) */
+.d-maps-container {
+    display: flex;
+    gap: 15px;
+    height: 70vh;
+    max-width: var(--max-width);
+    margin: 50px auto 100px;
+    padding: 0 20px;
+}
+
+.d-map-panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    cursor: pointer;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+    transform: skewX(-5deg); /* Slight skew for internal feel */
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.d-map-panel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 60%);
+    opacity: 0.8;
+}
+
+.d-map-panel.active {
+    flex: 5;
+    transform: skewX(0); /* Straighten when active */
+    border-color: var(--clr-valorant-red);
+}
+
+.d-map-panel-inner {
+    transform: skewX(5deg);
+    width: 150%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s;
+}
+
+.d-map-panel.active .d-map-panel-inner {
+    transform: skewX(0);
+    width: 100%;
+}
+
+.d-map-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.5s ease 0.3s;
+}
+
+.d-map-panel.active .d-map-content {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.d-map-content h2 {
+    font-size: 5rem;
+    font-family: var(--font-heading);
+    color: var(--clr-light);
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.d-map-content p {
+    font-size: 1.1rem;
+    color: var(--clr-gray);
+    max-width: 500px;
+}
+
+/* Dribbble Timeline Styles */
+.d-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px 0;
+}
+
+.d-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 6px;
+    background: repeating-linear-gradient(
+        0deg,
+        var(--clr-valorant-red),
+        var(--clr-valorant-red) 20px,
+        transparent 20px,
+        transparent 40px
+    );
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.d-timeline-event {
+    width: 50%;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.d-timeline-event:nth-child(even) {
+    margin-left: 50%;
+}
+
+.d-event-card {
+    background: var(--clr-darker);
+    border: 1px solid var(--clr-gray);
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    transform: skewX(-10deg);
+    transition: var(--transition-medium);
+}
+
+.d-timeline-event:nth-child(even) .d-event-card {
+    transform: skewX(10deg);
+}
+
+.d-event-card:hover {
+    border-color: var(--clr-valorant-red);
+    background: rgba(255, 70, 85, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.d-event-card-inner {
+    transform: skewX(10deg);
+}
+
+.d-timeline-event:nth-child(even) .d-event-card-inner {
+    transform: skewX(-10deg);
+}
+
+.d-event-marker {
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: var(--clr-valorant-red);
+    border: 5px solid var(--clr-darker);
+    border-radius: 4px;
+    z-index: 3;
+    transform: rotate(45deg);
+}
+
+.d-timeline-event:nth-child(odd) .d-event-marker {
+    right: -15px;
+}
+
+.d-timeline-event:nth-child(even) .d-event-marker {
+    left: -15px;
+}
+
+.d-event-date {
+    font-family: var(--font-heading);
+    color: var(--clr-valorant-red);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.d-event-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--clr-light);
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.d-event-image {
+    margin-top: 20px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.d-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.5);
+    transition: var(--transition-medium);
+}
+
+.d-event-card:hover .d-event-image img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* FAQ & About Dribbble Styles */
+.d-faq-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.d-faq-item {
+    background: var(--clr-darker);
+    border: 1px solid var(--clr-gray);
+    margin-bottom: 20px;
+    transition: var(--transition-medium);
+}
+
+.d-faq-item.active {
+    border-color: var(--clr-valorant-red);
+    box-shadow: 0 5px 20px rgba(255, 70, 85, 0.2);
+}
+
+.d-faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-faq-question h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.d-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 30px;
+}
+
+.d-faq-answer p {
+    padding-bottom: 25px;
+    color: var(--clr-gray);
+    line-height: 1.6;
+}
+
+/* About Editorial Style */
+.d-about-magazine {
+    max-width: 1200px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.d-about-text h2 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 0.9;
+    color: var(--clr-valorant-red);
+    margin-bottom: 30px;
+}
+
+.d-about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--clr-light);
+    margin-bottom: 30px;
+}
+
+.d-about-image {
+    position: relative;
+    border: 10px solid var(--clr-valorant-red);
+}
+
+.d-about-image img {
+    width: 100%;
+    display: block;
+    transform: translate(30px, -30px);
+    transition: var(--transition-medium);
+}
+
+.d-about-magazine:hover .d-about-image img {
+    transform: translate(0, 0);
 }
