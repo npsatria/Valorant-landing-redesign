@@ -1,101 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home - Valorant </title>
+    <title>VALORANT: Your 2026 Tactical Shooter</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Teko:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="shortcut icon" href="https://i.pinimg.com/1200x/39/dc/66/39dc66a4fbaa85dcd12a49f216b60ead.jpg" type="image/x-icon">
 
-    <link rel="stylesheet" href="/global/navbar.css">
-    <link rel="stylesheet" href="/css/Home.css">
-    <link rel="stylesheet" href="/global/search.css">
-    <link rel="stylesheet" href="/global/Testiuser.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://i.pinimg.com/1200x/39/dc/66/39dc66a4fbaa85dcd12a49f216b60ead.jpg"
+        type="image/x-icon">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Consolidated Styles -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/components.css">
 </head>
-<body>
-    <nav class="nav">
-        <div class="container">
-            <h1 class="logo"><a href="/index.html"> paloo </a></h1>
-            <ul>
-                <li><a href="/Pages/navbarHome/Home.html" class="current">HOME</a></li>
-                <li><a href="/Pages/Agen/AgenValo.html"> AGEN </a></li>
-                <li><a href="/Pages/maps/maps.html"> MAPS </a></li>
-                <li><a href="/Pages/HistoryPages/history.html"> HISTORY </a></li>
-                <li><a href="/Pages/FAQ/faq.html"> FAQ </a></li>
-                <li><a href="/Pages/about/about.html"> ABOUT </a></li>
-            </ul>
 
-             <div class="search">
-               <input type="text" class="input" placeholder="search...">
-                <button class="btn">
-                    <i class="fas fa-search"></i>
-                </button>
+<body>
+
+    <!-- Global Navbar -->
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="logo"><a href="./index.html">VALORANT</a></h1>
+            <ul>
+                <li><a href="./index.html" class="current">Home</a></li>
+                <li><a href="./pages/agen.html">Agents</a></li>
+                <li><a href="./pages/maps.html">Maps</a></li>
+                <li><a href="./pages/history.html">Lore</a></li>
+                <li><a href="./pages/faq.html">FAQ</a></li>
+                <li><a href="./pages/about.html">About</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search agents, maps...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </nav>
 
+    <!-- Epic Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <h1>  READY KIDS??? </h1>
-            <p> BOT BOT BOT </p>
-            <a href="#" class="cta-button"> GO GO GO </a>
+        <video autoplay loop muted playsinline class="hero-video"
+            poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt189303518290a29c/6243823a5857280e21a37c37/VALORANT_2022_E4A2_PlayVALORANT_Caches-of-Chaos_1920x1080_MB01.jpg">
+            <!-- Using a generic placeholder as the original bg image -->
+            <source
+                src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt29d7c4f6bc077e9e/5eb26f54402b8b495f1aaae1/V_AGENTS_587x900_Phx.mp4"
+                type="video/mp4">
+        </video>
+        <div class="hero-content" data-aos="fade-up">
+            <h1>DEFY THE LIMITS</h1>
+            <p>Blend your style and experience on a global, competitive stage.</p>
+            <a href="#" class="btn-primary">Play for Free</a>
         </div>
     </header>
 
-    <main class="container content">
-        <h2> Berita Terkini! </h2>
-        <div class="news-grid">
-            <div class="news-card">
-                <img src="https://i.pinimg.com/736x/84/9b/5a/849b5a54dd01ad8de133c5a190f8145f.jpg" alt="Agent Valorant Omen">
-                <div class="card-content">
-                    <h3> Berita 1 </h3>
-                    <p> lorem ipsum dolor sit amet..... </p>
-                    <a href="#">Read More</a>
-                </div>
+    <!-- News Section -->
+    <section class="section news-section">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>LATEST INTEL</h2>
             </div>
-            <div class="news-card">
-                <img src="https://i.pinimg.com/736x/88/35/ef/8835ef72b26ef1249d1c1e767ff42952.jpg" alt="Agent Valorant Jett">
-                <div class="card-content">
-                    <h3> Berita 2 </h3>
-                    <p>  lorem ipsum dolor sit amet..... </p>
-                    <a href="#">View Collection</a>
-                </div>
-            </div>
-            <div class="news-card">
-                <img src="https://i.pinimg.com/1200x/ef/dd/6a/efdd6ae46b80ba2f6601f31af5748a35.jpg" alt="Agent Valorant Sage">
-                <div class="card-content">
-                    <h3> Berita 3 </h3>
-                    <p> lorem ipsum dolor sit amet.... </p>
-                    <a href="#">Learn More</a>
-                </div>
+            <div class="news-grid">
+                <!-- News Card 1 -->
+                <article class="news-card">
+                    <div class="news-card-img-wrapper">
+                        <img src="https://i.pinimg.com/736x/84/9b/5a/849b5a54dd01ad8de133c5a190f8145f.jpg"
+                            alt="Agent Valorant Omen">
+                    </div>
+                    <div class="news-card-content">
+                        <h3>OMEN LORE UPDATE</h3>
+                        <p>Dive deep into the shadows and uncover the untold story of Omen's origins. The reality is
+                            fracturing.</p>
+                        <div>
+                            <a href="#" class="read-more">Read Intel <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="news-card">
+                    <div class="news-card-img-wrapper">
+                        <img src="https://i.pinimg.com/736x/88/35/ef/8835ef72b26ef1249d1c1e767ff42952.jpg"
+                            alt="Agent Valorant Jett">
+                    </div>
+                    <div class="news-card-content">
+                        <h3>PATCH NOTES 8.04</h3>
+                        <p>Jett receives a massive overhaul to her mobility, plus economy tweaks and an update to the
+                            map pool.</p>
+                        <div>
+                            <a href="#" class="read-more">View Patch <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="news-card">
+                    <div class="news-card-img-wrapper">
+                        <img src="https://i.pinimg.com/1200x/ef/dd/6a/efdd6ae46b80ba2f6601f31af5748a35.jpg"
+                            alt="Agent Valorant Sage">
+                    </div>
+                    <div class="news-card-content">
+                        <h3>CHAMPIONS 2026</h3>
+                        <p>Prepare for the biggest clash in Valorant history. The Champions Tour arrives with exclusive
+                            drops and rewards.</p>
+                        <div>
+                            <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-    </main>
+    </section>
 
-    <section class="testimonial-section">
-        <div class="testimonial-container">
-           <div class="progress-bar"></div>
-            <!-- <div class="fas fa-quote-right fa-quote"></div>
-            <div class="fas fa-quote-left fa-quote"></div> -->
-            <p class="testimonial">
-                Developer-nya responsif, sering update dan dengerin masukan player. Jarang banget ada game yang kayak gini.
-            </p>
-            <div class="user">
+    <!-- Testimonial Section -->
+    <section class="section testimonial-section">
+        <div class="container" data-aos="fade-up">
+            <div class="testimonial-container">
+                <p class="testimonial-quote">"The 2026 update has completely redefined competitive play. The devs
+                    listen, the meta shifts dynamically, and the thrill is unmatched."</p>
+                <div class="testimonial-user">
                     <img src="https://i.pinimg.com/1200x/b2/98/36/b298366b4b50fdcd9d80c7387a563e62.jpg"
-                    alt="Foto Veeti Seppanen" class="user-image" /> <div class="user-details">
-                    <h4 class="username">Veeti Seppanen</h4>
-                    <p class="role">Director</p>
+                        alt="Veeti Seppanen" class="user-image" />
+                    <div class="user-details">
+                        <h4>Veeti Seppanen</h4>
+                        <p>VCT PRO PLAYER</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="Home.js"></script>
-    <script src="/global/search.js"></script>
-    <script src="/global/Testiuser.js"></script>
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" data-aos="fade-up">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="footer-text">&copy; 2026 Riot Games, Inc. Riot Games, VALORANT, and any associated logos are
+                    trademarks, service marks, and/or registered trademarks of Riot Games, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Consolidated Scripts & AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
+
 </html>

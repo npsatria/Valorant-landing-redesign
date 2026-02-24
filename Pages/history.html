@@ -1,89 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home - Valorant </title>
+    <title>Lore & History - VALORANT</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Teko:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="shortcut icon" href="https://i.pinimg.com/1200x/39/dc/66/39dc66a4fbaa85dcd12a49f216b60ead.jpg"
+        type="image/x-icon">
 
-    <link rel="stylesheet" href="/global/navbar.css">
-    <link rel="stylesheet" href="/Pages/HistoryPages/history.css">
-    <link rel="stylesheet" href="/global/search.css">
-    <link rel="stylesheet" href="/global/Testiuser.css">
-     <link rel="shortcut icon" href="https://i.pinimg.com/1200x/39/dc/66/39dc66a4fbaa85dcd12a49f216b60ead.jpg" type="image/x-icon">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Consolidated Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
 </head>
-<body>
-     <nav class="nav">
-        <div class="container">
-            <h1 class="logo"><a href="/index.html"> paloo </a></h1>
-            <ul>
-                <li><a href="/Pages/navbarHome/Home.html"> HOME </a></li>
-                <li><a href="/Pages/Agen/AgenValo.html"> AGEN </a></li>
-                <li><a href="/Pages/maps/maps.html"> MAPS </a></li>
-                <li><a href="/Pages/HistoryPages/history.html" class="current"> HISTORY </a></li>
-                <li><a href="/Pages/FAQ/faq.html"> FAQ </a></li>
-                <li><a href="/Pages/about/about.html"> ABOUT </a></li>
-            </ul>
 
-             <div class="search">
-               <input type="text" class="input" placeholder="search...">
-                <button class="btn">
-                    <i class="fas fa-search"></i>
-                </button>
+<body>
+    <!-- Global Navbar -->
+    <nav class="nav">
+        <div class="nav-container">
+            <h1 class="logo"><a href="../index.html">VALORANT</a></h1>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./agen.html">Agents</a></li>
+                <li><a href="./maps.html">Maps</a></li>
+                <li><a href="./history.html" class="current">Lore</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search agents, maps...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </nav>
 
-<div class="history-container">
-    <h1 class="page-title"> History Paloo </h1>
+    <header class="history-header" data-aos="fade-up">
+        <h1>THE VALORANT PROTOCOL</h1>
+    </header>
 
-    <article class="history-event">
-        <div class="event-image">
-            <img src="https://i.pinimg.com/736x/7e/60/b2/7e60b2823e77edd465dc7ec6c796bfdd.jpg" alt="Project A Announcement">
-        </div>
-        <div class="event-details">
-            <p class="event-date">16 OKTOBER 2019</p>
-            <h2 class="event-title">PROJECT A</h2>
-            <p class="event-description">Riot Games pertama kali mengumumkan proyek FPS taktikal baru dengan nama kode "Project A" saat perayaan ulang tahun ke-10 League of Legends.</p>
-        </div>
-    </article>
+    <main class="fade-in">
+        <div class="timeline">
+            <!-- Event 1 -->
+            <div class="timeline-event">
+                <div class="event-content" data-aos="fade-up">
+                    <p class="event-date">16 OCTOBER 2019</p>
+                    <h2 class="event-title">PROJECT "A"</h2>
+                    <p class="event-description">Riot Games first hinted at a character-based tactical shooter codenamed
+                        "Project A" during the 10-year anniversary stream of League of Legends, promising lethal gunplay
+                        and unique abilities.</p>
+                    <div class="event-image">
+                        <img src="https://i.pinimg.com/736x/7e/60/b2/7e60b2823e77edd465dc7ec6c796bfdd.jpg"
+                            alt="Project A">
+                    </div>
+                </div>
+            </div>
 
-    <article class="history-event">
-        <div class="event-image">
-            <img src="https://i.pinimg.com/736x/37/2e/22/372e22258e2c2e64b57d4959a62ecacf.jpg" alt="Valorant Announcement">
-        </div>
-        <div class="event-details">
-            <p class="event-date">2 MARET 2020</p>
-            <h2 class="event-title">PENGUMUMAN VALORANT</h2>
-            <p class="event-description">Project A secara resmi diumumkan dengan nama VALORANT. Riot merilis gameplay trailer pertama yang menunjukkan Agen dan kemampuan unik mereka.</p>
-        </div>
-    </article>
+            <!-- Event 2 -->
+            <div class="timeline-event">
+                <div class="event-content" data-aos="fade-up">
+                    <p class="event-date">2 MARCH 2020</p>
+                    <h2 class="event-title">THE REVEAL</h2>
+                    <p class="event-description">Project A is officially unveiled as VALORANT. First gameplay trailers
+                        are released, showcasing the hyper-natural cast of Agents and the fundamental tactical loop of
+                        the game.</p>
+                    <div class="event-image">
+                        <img src="https://i.pinimg.com/736x/37/2e/22/372e22258e2c2e64b57d4959a62ecacf.jpg" alt="Reveal">
+                    </div>
+                </div>
+            </div>
 
-    <article class="history-event">
-        <div class="event-image">
-            <img src="https://i.pinimg.com/736x/7b/f6/1b/7bf61b8b77e394c4bc709f6b02c0db24.jpg" alt="Valorant Full Release">
-        </div>
-        <div class="event-details">
-            <p class="event-date">2 JUNI 2020</p>
-            <h2 class="event-title">RILIS PENUH</h2>
-            <p class="event-description">VALORANT resmi dirilis secara global bersama Agen baru, Reyna, dan map baru, Ascent. Game ini langsung menjadi salah satu FPS paling populer.</p>
-        </div>
-    </article>
+            <!-- Event 3 -->
+            <div class="timeline-event">
+                <div class="event-content" data-aos="fade-up">
+                    <p class="event-date">2 JUNE 2020</p>
+                    <h2 class="event-title">IGNITION: GLOBAL LAUNCH</h2>
+                    <p class="event-description">VALORANT enters full global release alongside the game's newest Agent,
+                        Reyna, and the launch map Ascent. A new era of tactical shooters officially begins.</p>
+                    <div class="event-image">
+                        <img src="https://i.pinimg.com/736x/7b/f6/1b/7bf61b8b77e394c4bc709f6b02c0db24.jpg"
+                            alt="Global Release">
+                    </div>
+                </div>
+            </div>
 
-    <article class="history-event">
-        <div class="event-image">
-            <img src="https://i.pinimg.com/1200x/b1/ae/0f/b1ae0fca7d8ad0b5e3be534d8f9241b2.jpg" alt="Valorant Champions Tour">
+            <!-- Event 4 -->
+            <div class="timeline-event">
+                <div class="event-content" data-aos="fade-up">
+                    <p class="event-date">26 JANUARY 2021</p>
+                    <h2 class="event-title">CHAMPIONS TOUR INAUGURATION</h2>
+                    <p class="event-description">The VALORANT Champions Tour (VCT) is announced, establishing a
+                        year-long global esports circuit culminating in the first-ever global champion being crowned.
+                    </p>
+                    <div class="event-image">
+                        <img src="https://i.pinimg.com/1200x/b1/ae/0f/b1ae0fca7d8ad0b5e3be534d8f9241b2.jpg" alt="VCT">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="event-details">
-            <p class="event-date">26 JANUARI 2021</p>
-            <h2 class="event-title">VALORANT CHAMPIONS TOUR (VCT)</h2>
-            <p class="event-description">Sirkuit turnamen global, VCT, diluncurkan dan menjadi puncak kompetisi esports VALORANT di seluruh dunia.</p>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" data-aos="fade-up">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="footer-text">&copy; 2026 Riot Games, Inc. VALORANT and any associated logos are trademarks of
+                    Riot Games, Inc.</p>
+            </div>
         </div>
-    </article>
-</div>
+    </footer>
+
+    <!-- Consolidated Scripts & AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
+
 </html>
